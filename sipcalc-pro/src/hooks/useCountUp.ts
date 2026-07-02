@@ -1,13 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
 
 export function useCountUp(target: number, duration: number = 700): number {
-  const [current, setCurrent] = useState(0);
-  const startRef = useRef(0);
+  // Initialise to `target` so the correct value is shown on first render
+  // (avoids a flash of "0" after SSR hydration).
+  const [current, setCurrent] = useState(target);
+  const startRef = useRef(target);
   const frameRef = useRef<number>(0);
 
   useEffect(() => {
     const start = startRef.current;
     const end = target;
+    if (start === end) return;
     const startTime = performance.now();
 
     const animate = (now: number) => {
