@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sipcalcpro.in/sitemap.xml
+
+# Block any server-internal paths (there are none for this SPA, but good practice)
+Disallow: /node_modules/

@@ -1,0 +1,5 @@
+# Google AdSense Publisher ads.txt
+# Replace the placeholder below with your actual AdSense publisher details when approved.
+# Format: google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+#
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
