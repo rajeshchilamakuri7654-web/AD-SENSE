@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import Layout from './components/Layout';
 
@@ -31,29 +31,27 @@ function PageLoader() {
 export default function App() {
   return (
     <ThemeProvider>
-      <BrowserRouter>
-        <Suspense fallback={<PageLoader />}>
-          <Routes>
-            <Route element={<Layout />}>
-              <Route path="/" element={<Home />} />
-              <Route path="/sip-calculator" element={<SIPCalculator />} />
-              <Route path="/lumpsum-vs-sip" element={<LumpsumVsSIP />} />
-              <Route path="/step-up-sip-calculator" element={<StepUpSIP />} />
-              <Route path="/xirr-calculator" element={<XIRRCalculator />} />
-              <Route path="/cagr-calculator" element={<CAGRCalculator />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<BlogIndex />} />
-              <Route path="/blog/what-is-sip" element={<WhatIsSIP />} />
-              <Route path="/blog/sip-vs-lumpsum" element={<SIPvsLumpsum />} />
-              <Route path="/blog/xirr-vs-cagr" element={<XIRRvsCAGR />} />
-              <Route path="/blog/power-of-compounding" element={<PowerOfCompounding />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="*" element={<NotFound />} />
-            </Route>
-          </Routes>
-        </Suspense>
-      </BrowserRouter>
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/sip-calculator" element={<SIPCalculator />} />
+            <Route path="/lumpsum-vs-sip" element={<LumpsumVsSIP />} />
+            <Route path="/step-up-sip-calculator" element={<StepUpSIP />} />
+            <Route path="/xirr-calculator" element={<XIRRCalculator />} />
+            <Route path="/cagr-calculator" element={<CAGRCalculator />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<BlogIndex />} />
+            <Route path="/blog/what-is-sip" element={<WhatIsSIP />} />
+            <Route path="/blog/sip-vs-lumpsum" element={<SIPvsLumpsum />} />
+            <Route path="/blog/xirr-vs-cagr" element={<XIRRvsCAGR />} />
+            <Route path="/blog/power-of-compounding" element={<PowerOfCompounding />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </ThemeProvider>
   );
 }

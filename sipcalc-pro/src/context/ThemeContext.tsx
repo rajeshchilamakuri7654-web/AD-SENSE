@@ -14,12 +14,14 @@ const ThemeContext = createContext<ThemeContextType>({
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
+    if (typeof window === 'undefined') return 'light';
     const stored = localStorage.getItem('sipcalc-theme') as Theme | null;
     if (stored === 'dark' || stored === 'light') return stored;
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   });
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('sipcalc-theme', theme);
   }, [theme]);
