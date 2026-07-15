@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import SEOMeta from '../../components/SEOMeta';
+import BlogArticleWrapper from '../../components/BlogArticleWrapper';
 
 export default function WhatIsSIP() {
   return (
@@ -11,7 +12,7 @@ export default function WhatIsSIP() {
       />
       <div className="section">
         <div className="container">
-          <article className="blog-article">
+          <BlogArticleWrapper>
             <nav aria-label="Breadcrumb" style={{ fontSize: 13, color: 'var(--color-text-muted)', marginBottom: 24, display: 'flex', gap: 6 }}>
               <Link to="/" style={{ color: 'var(--color-accent)' }}>Home</Link>
               <span>›</span>
@@ -105,7 +106,7 @@ export default function WhatIsSIP() {
             <p>
               SIP is arguably the most effective investment strategy available to the average Indian investor. It removes the barriers of capital, timing, and expertise — you simply invest consistently and let compounding do the work. The best time to start a SIP was 10 years ago. The second best time is today.
             </p>
-          </article>
+          </BlogArticleWrapper>
         </div>
       </div>
     </>

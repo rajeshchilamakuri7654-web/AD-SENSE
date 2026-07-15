@@ -8,7 +8,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
-import { useTheme } from '../../context/ThemeContext';
+import { useChartColors } from '../../utils/chartTheme';
 import { axisTickFormatter, formatCurrency } from '../../utils/formatters';
 
 interface DataPoint {
@@ -45,25 +45,21 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 };
 
 export default function ComparisonChart({ data }: Props) {
-  const { theme } = useTheme();
-  const lumpsumColor = theme === 'dark' ? '#818CF8' : '#3B5BDB';
-  const sipColor = theme === 'dark' ? '#14B8A6' : '#0D9488';
-  const gridColor = theme === 'dark' ? '#334155' : '#E2E8F0';
-  const axisColor = theme === 'dark' ? '#64748B' : '#94A3B8';
+  const colors = useChartColors();
 
   return (
     <ResponsiveContainer width="100%" height={280}>
       <BarChart data={data} margin={{ top: 8, right: 8, left: 0, bottom: 0 }} barGap={4}>
-        <CartesianGrid strokeDasharray="3 3" stroke={gridColor} vertical={false} />
+        <CartesianGrid strokeDasharray="3 3" stroke={colors.grid} vertical={false} />
         <XAxis
           dataKey="year"
-          tick={{ fill: axisColor, fontSize: 12 }}
+          tick={{ fill: colors.axis, fontSize: 12 }}
           tickLine={false}
-          axisLine={{ stroke: gridColor }}
+          axisLine={{ stroke: colors.grid }}
         />
         <YAxis
           tickFormatter={axisTickFormatter}
-          tick={{ fill: axisColor, fontSize: 12 }}
+          tick={{ fill: colors.axis, fontSize: 12 }}
           tickLine={false}
           axisLine={false}
           width={60}
@@ -73,8 +69,8 @@ export default function ComparisonChart({ data }: Props) {
           wrapperStyle={{ fontSize: 12, paddingTop: 12 }}
           formatter={(v) => <span style={{ color: 'var(--color-text-secondary)' }}>{v}</span>}
         />
-        <Bar dataKey="lumpsum" name="Lumpsum" fill={lumpsumColor} radius={[4, 4, 0, 0]} />
-        <Bar dataKey="sip" name="SIP" fill={sipColor} radius={[4, 4, 0, 0]} />
+        <Bar dataKey="lumpsum" name="Lumpsum" fill={colors.lumpsum} radius={[4, 4, 0, 0]} />
+        <Bar dataKey="sip" name="SIP" fill={colors.sip} radius={[4, 4, 0, 0]} />
       </BarChart>
     </ResponsiveContainer>
   );

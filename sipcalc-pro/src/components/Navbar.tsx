@@ -95,10 +95,13 @@ export default function Navbar() {
             </li>
           ))}
           <div className="mobile-nav__section-title" style={{ marginTop: 8 }}>More</div>
+          <li><NavLink to="/what-is-sip" onClick={closeMobile}>📘 What is SIP?</NavLink></li>
+          <li><NavLink to="/sip-vs-lumpsum" onClick={closeMobile}>⚖️ SIP vs Lump Sum</NavLink></li>
           <li><NavLink to="/blog" onClick={closeMobile}>📝 Blog</NavLink></li>
           <li><NavLink to="/about" onClick={closeMobile}>ℹ️ About</NavLink></li>
           <li><NavLink to="/contact" onClick={closeMobile}>📬 Contact</NavLink></li>
-          <li><NavLink to="/privacy-policy" onClick={closeMobile}>🔒 Privacy Policy</NavLink></li>
+          <li><NavLink to="/privacy" onClick={closeMobile}>🔒 Privacy Policy</NavLink></li>
+          <li><NavLink to="/terms" onClick={closeMobile}>📄 Terms of Use</NavLink></li>
         </ul>
       </div>
     </>

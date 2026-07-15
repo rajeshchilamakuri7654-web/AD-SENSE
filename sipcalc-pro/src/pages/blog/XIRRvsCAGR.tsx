@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import SEOMeta from '../../components/SEOMeta';
+import BlogArticleWrapper from '../../components/BlogArticleWrapper';
 
 export default function XIRRvsCAGR() {
   return (
@@ -11,7 +12,7 @@ export default function XIRRvsCAGR() {
       />
       <div className="section">
         <div className="container">
-          <article className="blog-article">
+          <BlogArticleWrapper>
             <nav aria-label="Breadcrumb" style={{ fontSize: 13, color: 'var(--color-text-muted)', marginBottom: 24, display: 'flex', gap: 6 }}>
               <Link to="/" style={{ color: 'var(--color-accent)' }}>Home</Link>
               <span>›</span>
@@ -99,7 +100,7 @@ export default function XIRRvsCAGR() {
             <p>
               Both CAGR and XIRR are valuable tools — for different purposes. Always use XIRR to evaluate your personal investment portfolio returns, especially if you invest via SIP. Use CAGR to compare the published performance of mutual fund schemes on a level playing field.
             </p>
-          </article>
+          </BlogArticleWrapper>
         </div>
       </div>
     </>

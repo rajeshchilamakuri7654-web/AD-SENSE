@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import SEOMeta from '../../components/SEOMeta';
+import BlogArticleWrapper from '../../components/BlogArticleWrapper';
 
 export default function PowerOfCompounding() {
   return (
@@ -11,7 +12,7 @@ export default function PowerOfCompounding() {
       />
       <div className="section">
         <div className="container">
-          <article className="blog-article">
+          <BlogArticleWrapper>
             <nav aria-label="Breadcrumb" style={{ fontSize: 13, color: 'var(--color-text-muted)', marginBottom: 24, display: 'flex', gap: 6 }}>
               <Link to="/" style={{ color: 'var(--color-accent)' }}>Home</Link>
               <span>›</span>
@@ -115,7 +116,7 @@ export default function PowerOfCompounding() {
             <p>
               Compounding is not magic — it's mathematics. But over decades, that mathematics produces results that feel magical. The strategy is simple: start early, stay consistent, reinvest returns, and resist the temptation to withdraw. Time in the market always beats timing the market. Your future self will thank you.
             </p>
-          </article>
+          </BlogArticleWrapper>
         </div>
       </div>
     </>

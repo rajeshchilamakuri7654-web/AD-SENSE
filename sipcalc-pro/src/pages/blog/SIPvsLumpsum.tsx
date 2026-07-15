@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import SEOMeta from '../../components/SEOMeta';
+import BlogArticleWrapper from '../../components/BlogArticleWrapper';
 
 export default function SIPvsLumpsum() {
   return (
@@ -11,7 +12,7 @@ export default function SIPvsLumpsum() {
       />
       <div className="section">
         <div className="container">
-          <article className="blog-article">
+          <BlogArticleWrapper>
             <nav aria-label="Breadcrumb" style={{ fontSize: 13, color: 'var(--color-text-muted)', marginBottom: 24, display: 'flex', gap: 6 }}>
               <Link to="/" style={{ color: 'var(--color-accent)' }}>Home</Link>
               <span>›</span>
@@ -105,7 +106,7 @@ export default function SIPvsLumpsum() {
             <p>
               For most Indian retail investors — particularly those with monthly income — SIP is the optimal strategy. It requires no market timing skill, enforces savings discipline, and delivers excellent returns over 10+ year horizons through the power of rupee cost averaging and compounding. For investors with lump sums who can stomach volatility, a lumpsum investment or STP approach may deliver superior mathematical returns.
             </p>
-          </article>
+          </BlogArticleWrapper>
         </div>
       </div>
     </>

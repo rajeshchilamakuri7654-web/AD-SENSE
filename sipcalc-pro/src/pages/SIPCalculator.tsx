@@ -142,6 +142,7 @@ export default function SIPCalculator() {
                   value={result.maturityValue}
                   variant="primary"
                   compact
+                  investedAmount={result.totalInvested}
                 />
               </div>
 

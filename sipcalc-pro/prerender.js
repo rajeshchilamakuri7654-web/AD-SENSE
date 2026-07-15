@@ -19,7 +19,14 @@ const routes = [
   '/blog/sip-vs-lumpsum',
   '/blog/xirr-vs-cagr',
   '/blog/power-of-compounding',
+  '/blog/how-sip-returns-are-calculated',
+  '/blog/step-up-sip',
+  '/blog/common-sip-mistakes',
+  '/what-is-sip',
+  '/sip-vs-lumpsum',
   '/privacy-policy',
+  '/privacy',
+  '/terms',
   '/404'
 ];
 
@@ -90,10 +97,45 @@ const metadata = {
     description: 'Understand the power of compounding with real examples showing how ₹5,000/month can grow to ₹5+ crore over 40 years. Why time is your most valuable investing asset.',
     canonical: 'https://sipcalcpro.in/blog/power-of-compounding',
   },
+  '/blog/how-sip-returns-are-calculated': {
+    title: 'How SIP Returns Are Calculated: The Formula Explained | SIPCalc Pro',
+    description: 'Understand the exact compound interest formula behind SIP returns — in plain language. Step-by-step worked example with monthly compounding and maturity value.',
+    canonical: 'https://sipcalcpro.in/blog/how-sip-returns-are-calculated',
+  },
+  '/blog/step-up-sip': {
+    title: 'What is Step-Up SIP? How It Works and Why It\'s Powerful | SIPCalc Pro',
+    description: 'Step-Up SIP increases your monthly investment by a fixed % each year. Learn how it works, the formula behind it, and why even a 10% annual top-up adds lakhs to your corpus.',
+    canonical: 'https://sipcalcpro.in/blog/step-up-sip',
+  },
+  '/blog/common-sip-mistakes': {
+    title: '8 Common SIP Mistakes That Cost Indian Investors Lakhs | SIPCalc Pro',
+    description: 'From stopping SIPs during market crashes to picking dividend plans and ignoring expense ratios — these 8 SIP mistakes silently erode your wealth.',
+    canonical: 'https://sipcalcpro.in/blog/common-sip-mistakes',
+  },
+  '/what-is-sip': {
+    title: 'What is SIP? Systematic Investment Plan Explained Simply | SIPCalc Pro',
+    description: 'SIP lets you invest a fixed amount in mutual funds every month. Learn how SIP works, its benefits, rupee cost averaging, and how to get started in India.',
+    canonical: 'https://sipcalcpro.in/what-is-sip',
+  },
+  '/sip-vs-lumpsum': {
+    title: 'SIP vs Lump Sum Investment: Which is Better and When? | SIPCalc Pro',
+    description: 'SIP or lump sum — which strategy suits you? A plain-language comparison with real numbers, market data, and a clear decision framework for Indian investors.',
+    canonical: 'https://sipcalcpro.in/sip-vs-lumpsum',
+  },
   '/privacy-policy': {
     title: 'Privacy Policy — SIPCalc Pro',
     description: "Read SIPCalc Pro's privacy policy. Learn how we handle data, use cookies, and integrate Google AdSense and Analytics.",
     canonical: 'https://sipcalcpro.in/privacy-policy',
+  },
+  '/privacy': {
+    title: 'Privacy Policy — SIPCalc Pro',
+    description: "Read SIPCalc Pro's privacy policy. Learn how we handle data, use cookies, and integrate Google AdSense and Analytics.",
+    canonical: 'https://sipcalcpro.in/privacy',
+  },
+  '/terms': {
+    title: 'Terms of Use — SIPCalc Pro',
+    description: 'Read SIPCalc Pro\'s Terms of Use. By using our free mutual fund calculators, you agree to these terms covering tool purpose, limitations, and governing law.',
+    canonical: 'https://sipcalcpro.in/terms',
   },
   '/404': {
     title: 'Page Not Found — SIPCalc Pro',

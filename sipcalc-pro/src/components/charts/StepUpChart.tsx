@@ -8,7 +8,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
-import { useTheme } from '../../context/ThemeContext';
+import { useChartColors } from '../../utils/chartTheme';
 import { axisTickFormatter, formatCurrency } from '../../utils/formatters';
 import type { StepUpYearlyPoint } from '../../utils/calculations';
 
@@ -40,36 +40,32 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 };
 
 export default function StepUpChart({ data }: Props) {
-  const { theme } = useTheme();
-  const investedColor = theme === 'dark' ? '#64748B' : '#94A3B8';
-  const valueColor = theme === 'dark' ? '#14B8A6' : '#0D9488';
-  const gridColor = theme === 'dark' ? '#334155' : '#E2E8F0';
-  const axisColor = theme === 'dark' ? '#64748B' : '#94A3B8';
+  const colors = useChartColors();
 
   return (
     <ResponsiveContainer width="100%" height={280}>
       <AreaChart data={data} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>
         <defs>
           <linearGradient id="sgValue" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%" stopColor={valueColor} stopOpacity={0.3} />
-            <stop offset="95%" stopColor={valueColor} stopOpacity={0} />
+            <stop offset="5%" stopColor={colors.value} stopOpacity={0.3} />
+            <stop offset="95%" stopColor={colors.value} stopOpacity={0} />
           </linearGradient>
           <linearGradient id="sgInvested" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%" stopColor={investedColor} stopOpacity={0.25} />
-            <stop offset="95%" stopColor={investedColor} stopOpacity={0} />
+            <stop offset="5%" stopColor={colors.invested} stopOpacity={0.25} />
+            <stop offset="95%" stopColor={colors.invested} stopOpacity={0} />
           </linearGradient>
         </defs>
-        <CartesianGrid strokeDasharray="3 3" stroke={gridColor} />
+        <CartesianGrid strokeDasharray="3 3" stroke={colors.grid} />
         <XAxis
           dataKey="year"
-          tick={{ fill: axisColor, fontSize: 12 }}
+          tick={{ fill: colors.axis, fontSize: 12 }}
           tickLine={false}
-          axisLine={{ stroke: gridColor }}
+          axisLine={{ stroke: colors.grid }}
           tickFormatter={(v) => `Y${v}`}
         />
         <YAxis
           tickFormatter={axisTickFormatter}
-          tick={{ fill: axisColor, fontSize: 12 }}
+          tick={{ fill: colors.axis, fontSize: 12 }}
           tickLine={false}
           axisLine={false}
           width={60}
@@ -83,7 +79,7 @@ export default function StepUpChart({ data }: Props) {
           type="monotone"
           dataKey="cumulativeInvested"
           name="Total Invested"
-          stroke={investedColor}
+          stroke={colors.invested}
           strokeWidth={2}
           fill="url(#sgInvested)"
           dot={false}
@@ -92,7 +88,7 @@ export default function StepUpChart({ data }: Props) {
           type="monotone"
           dataKey="cumulativeValue"
           name="Portfolio Value"
-          stroke={valueColor}
+          stroke={colors.value}
           strokeWidth={2.5}
           fill="url(#sgValue)"
           dot={false}

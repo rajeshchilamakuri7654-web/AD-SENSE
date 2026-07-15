@@ -96,8 +96,27 @@ export default function LumpsumVsSIP() {
 
             <section className="calc-results" aria-label="Results">
               {/* Winner banner */}
-              <div className={`chart-card`} style={{ background: lumpsumWins ? 'rgba(59,91,219,0.06)' : 'rgba(13,148,136,0.06)', borderColor: lumpsumWins ? 'rgba(59,91,219,0.25)' : 'rgba(13,148,136,0.25)', padding: '14px 20px', textAlign: 'center' }}>
-                <p style={{ margin: 0, fontSize: 14, fontWeight: 700, color: lumpsumWins ? '#3B5BDB' : 'var(--color-accent)' }}>
+              <div
+                className="chart-card"
+                style={{
+                  background: lumpsumWins
+                    ? 'color-mix(in srgb, var(--chart-lumpsum) 10%, transparent)'
+                    : 'color-mix(in srgb, var(--color-accent) 10%, transparent)',
+                  borderColor: lumpsumWins
+                    ? 'color-mix(in srgb, var(--chart-lumpsum) 25%, transparent)'
+                    : 'color-mix(in srgb, var(--color-accent) 25%, transparent)',
+                  padding: '14px 20px',
+                  textAlign: 'center',
+                }}
+              >
+                <p
+                  style={{
+                    margin: 0,
+                    fontSize: 14,
+                    fontWeight: 700,
+                    color: lumpsumWins ? 'var(--chart-lumpsum)' : 'var(--color-accent)',
+                  }}
+                >
                   {lumpsumWins ? '📊 Lumpsum wins by ' : '📈 SIP wins by '}
                   <strong>{formatCompact(Math.abs(lumpsum.maturityValue - sip.maturityValue))}</strong>
                   {' '}at {returnPct}% p.a. over {years} years

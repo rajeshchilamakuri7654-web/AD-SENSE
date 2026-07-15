@@ -33,8 +33,11 @@ export default function Footer() {
             <div className="footer__col-title">Learn</div>
             <ul className="footer__links">
               <li><Link to="/blog">All Articles</Link></li>
-              <li><Link to="/blog/what-is-sip">What is SIP?</Link></li>
-              <li><Link to="/blog/sip-vs-lumpsum">SIP vs Lumpsum</Link></li>
+              <li><Link to="/what-is-sip">What is SIP?</Link></li>
+              <li><Link to="/sip-vs-lumpsum">SIP vs Lump Sum</Link></li>
+              <li><Link to="/blog/how-sip-returns-are-calculated">How SIP Returns Work</Link></li>
+              <li><Link to="/blog/step-up-sip">Step-Up SIP Guide</Link></li>
+              <li><Link to="/blog/common-sip-mistakes">Common SIP Mistakes</Link></li>
               <li><Link to="/blog/xirr-vs-cagr">XIRR vs CAGR</Link></li>
               <li><Link to="/blog/power-of-compounding">Power of Compounding</Link></li>
             </ul>
@@ -46,21 +49,17 @@ export default function Footer() {
             <ul className="footer__links">
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/contact">Contact</Link></li>
-              <li><Link to="/contact#disclaimer">Disclaimer</Link></li>
-              <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+              <li><Link to="/privacy">Privacy Policy</Link></li>
+              <li><Link to="/terms">Terms of Use</Link></li>
             </ul>
           </div>
         </div>
 
-        <div className="footer__bottom">
-          <p className="footer__disclaimer">
-            <strong style={{ color: 'rgba(255,255,255,0.7)' }}>Disclaimer:</strong>{' '}
-            All calculators on SIPCalc Pro are for illustrative and educational purposes only. 
-            Calculations are based on assumed rates of return and do not guarantee future results. 
-            Mutual fund investments are subject to market risks. Past performance is not indicative of future returns. 
-            SIPCalc Pro is not a registered investment advisor. Please consult a SEBI-registered financial advisor before making investment decisions.
+        <div className="footer__bottom" style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: 'var(--space-lg)' }}>
+          <p className="footer__disclaimer" style={{ color: 'var(--color-text-muted)', fontSize: 'var(--font-size-xs)', textAlign: 'center', lineHeight: '1.6', maxWidth: '800px', margin: '0 auto var(--space-md)' }}>
+            <strong>Disclaimer:</strong> The SIP, Step-Up SIP, CAGR, XIRR, and Lumpsum vs SIP calculators provided on this platform are for educational and informational purposes only. They do not constitute financial, investment, or legal advice. All calculations are based on hypothetical annual return rates and do not guarantee future stock market or mutual fund performance. Always consult with a certified financial advisor before making any investment decisions.
           </p>
-          <p className="footer__copy">© {year} SIPCalc Pro. All rights reserved.</p>
+          <p className="footer__copy" style={{ textAlign: 'center' }}>© {year} SIPCalc Pro. All rights reserved.</p>
         </div>
       </div>
     </footer>

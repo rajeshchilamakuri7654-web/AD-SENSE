@@ -109,7 +109,7 @@ export default function CAGRCalculator() {
                       className="cagr-result-box__value"
                       aria-live="polite"
                       aria-atomic="true"
-                      style={cagr < 0 ? { color: '#FCA5A5' } : {}}
+                      style={cagr < 0 ? { color: 'var(--color-error-light, #FCA5A5)' } : {}}
                     >
                       {animatedCagr >= 0 ? '+' : ''}{animatedCagr.toFixed(2)}%
                     </div>
