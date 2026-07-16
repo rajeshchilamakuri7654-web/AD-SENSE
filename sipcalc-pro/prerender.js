@@ -25,7 +25,6 @@ const routes = [
   '/what-is-sip',
   '/sip-vs-lumpsum',
   '/privacy-policy',
-  '/privacy',
   '/terms',
   '/404'
 ];
@@ -127,11 +126,7 @@ const metadata = {
     description: "Read SIPCalc Pro's privacy policy. Learn how we handle data, use cookies, and integrate Google AdSense and Analytics.",
     canonical: 'https://sipcalcpro.in/privacy-policy',
   },
-  '/privacy': {
-    title: 'Privacy Policy — SIPCalc Pro',
-    description: "Read SIPCalc Pro's privacy policy. Learn how we handle data, use cookies, and integrate Google AdSense and Analytics.",
-    canonical: 'https://sipcalcpro.in/privacy',
-  },
+
   '/terms': {
     title: 'Terms of Use — SIPCalc Pro',
     description: 'Read SIPCalc Pro\'s Terms of Use. By using our free mutual fund calculators, you agree to these terms covering tool purpose, limitations, and governing law.',

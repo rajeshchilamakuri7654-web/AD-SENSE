@@ -59,7 +59,6 @@ export default function App() {
             <Route path="/what-is-sip" element={<WhatIsSIPPage />} />
             <Route path="/sip-vs-lumpsum" element={<SIPvsLumpsumPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="*" element={<NotFound />} />
           </Route>

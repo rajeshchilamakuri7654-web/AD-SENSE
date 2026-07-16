@@ -100,7 +100,7 @@ export default function Navbar() {
           <li><NavLink to="/blog" onClick={closeMobile}>📝 Blog</NavLink></li>
           <li><NavLink to="/about" onClick={closeMobile}>ℹ️ About</NavLink></li>
           <li><NavLink to="/contact" onClick={closeMobile}>📬 Contact</NavLink></li>
-          <li><NavLink to="/privacy" onClick={closeMobile}>🔒 Privacy Policy</NavLink></li>
+          <li><NavLink to="/privacy-policy" onClick={closeMobile}>🔒 Privacy Policy</NavLink></li>
           <li><NavLink to="/terms" onClick={closeMobile}>📄 Terms of Use</NavLink></li>
         </ul>
       </div>
